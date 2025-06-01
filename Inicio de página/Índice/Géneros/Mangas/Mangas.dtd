@@ -1,0 +1,9 @@
+<!ELEMENT mangas (manga+)>
+    <!ELEMENT manga (titulo, sinopsis, volumen, imagen, compras)>
+        <!ELEMENT titulo (#PCDATA)>
+        <!ELEMENT sinopsis (#PCDATA)>
+        <!ELEMENT volumen (#PCDATA)>
+        <!ELEMENT imagen (#PCDATA)>
+        <!ELEMENT compras (amazon, casadellibro)>
+            <!ELEMENT amazon (#PCDATA)>
+            <!ELEMENT casadellibro (#PCDATA)>

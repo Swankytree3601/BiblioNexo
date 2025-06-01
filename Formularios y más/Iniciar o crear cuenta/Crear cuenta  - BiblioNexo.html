@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear cuenta - BiblioNexo</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="icon" href="../../Íconos/slimes.ico">
+</head>
+<body>
+
+    <!-- Navbar -->
+     
+    <nav class="Navbar">
+        <h1><a class="titulo" href="../../index.html" >BiblioNexo</a></h1>
+        <a href ="../../Inicio de página/Índice/Índice - BiblioNexo.html">Ver todos los libros</a>
+        <a href="./Iniciar sección  - BiblioNexo.html">Iniciar sección</a>
+        <a href="./Crear cuenta  - BiblioNexo.html">Crear una cuenta</a>
+        <a href="../proceso de pago/Proceso de pago - BiblioNexo.html">Proceso de pago <img src="../../Íconos/tienda.png" alt="No se pudo cargar la imagen"></a>
+    </nav>
+    
+   
+    <div class="fondo">
+
+        <form id="registroForm">
+            <fieldset>
+              <legend><h2>Crear cuenta</h2></legend>
+          
+              <!-- Correo -->
+              <div class="mb-3">
+                <label for="correo" class="form-label">Correo electrónico:</label>
+                <input type="email" id="correo" class="form-control" required />
+              </div>
+          
+              <!-- Repetir correo -->
+              <div class="mb-3">
+                <label for="correo2" class="form-label">Repita el correo:</label>
+                <input type="email" id="correo2" class="form-control" required />
+              </div>
+          
+              <!-- Contraseña -->
+              <div class="mb-3">
+                <label for="clave" class="form-label">Contraseña:</label>
+                <input type="password" id="clave" class="form-control" required minlength="8" maxlength="50" />
+              </div>
+          
+              <!-- Fecha de nacimiento -->
+              <div class="mb-3">
+                <label for="edad" class="form-label">Fecha de nacimiento:</label>
+                <input type="date" id="edad" class="form-control" required />
+              </div>
+          
+              <!-- Género -->
+              <div class="mb-3">
+                <label class="form-label">Seleccione su género:</label>
+                <div class="form-check">
+                  <input type="radio" id="masculino" name="genero" value="masculino" class="form-check-input" required />
+                  <label for="masculino" class="form-check-label">Masculino</label>
+                </div>
+                <div class="form-check">
+                  <input type="radio" id="femenino" name="genero" value="femenino" class="form-check-input" />
+                  <label for="femenino" class="form-check-label">Femenino</label>
+                </div>
+                <div class="form-check">
+                  <input type="radio" id="otro" name="genero" value="otro" class="form-check-input" />
+                  <label for="otro" class="form-check-label">Otro</label>
+                </div>
+              </div>
+          
+              <!-- Nombre -->
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre/s:</label>
+                <input type="text" id="nombre" class="form-control" required />
+              </div>
+          
+              <!-- Apellido -->
+              <div class="mb-3">
+                <label for="apellido" class="form-label">Apellido/s:</label>
+                <input type="text" id="apellido" class="form-control" required />
+              </div>
+          
+              <!-- Foto de perfil -->
+              <div class="mb-3">
+                <label for="foto" class="form-label">Foto de perfil:</label>
+                <input type="file" id="foto" class="form-control" />
+              </div>
+          
+              <!-- Botón -->
+              <button type="submit" onclick="Guardar(event)" class="btn btn-primary">Continuar</button>
+            </fieldset>
+          </form>
+          
+          <button type="button" onclick="Mirar()" class="btn btn-primary">Ver Datos en consola</button>
+
+
+    <h3>¿Ya tienes cuenta?</h3>
+    <p class="centrado">Ingresa aquí: <a href="./Iniciar sección  - BiblioNexo.html">iniciar sección</a></p>
+
+    <footer>
+        <h3>Información</h3>
+        
+        <p class="centrado">
+        <a href="../../Información/Derechos de autor.html">Derechos de autor</a>
+        <a href="../../Información/Políticas de privacidad.html">Políticas de privacidad</a>
+        <a href="https://www.instagram.com">Instagram <img class="logos" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/640px-Instagram_icon.png" alt="No se pudo cargar la imagen"></a>
+        <a href="https://www.facebook.com">Facebook <img class="logos" src="https://cdn.pixabay.com/photo/2021/08/10/17/03/facebook-6536473_960_720.png" alt="No se pudo cargar la imagen"></a>
+        </p>
+    </footer>
+
+</div>
+</body>
+
+  <!-- Firebase Compat SDK -->  
+<script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore-compat.js"></script>
+
+<!-- Scripts de configuración y lógica -->
+<script src="../../JS/Configurar.js"></script>
+<script src="../../JS/Guardar.js"></script>
+<script src="../../JS/Mirar.js"></script>
+
+</html>

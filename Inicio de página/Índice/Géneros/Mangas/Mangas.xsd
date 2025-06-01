@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Elemento raíz -->
+  <xs:element name="mangas">
+    <xs:complexType>
+      <xs:sequence>
+        <!-- Puede haber uno o más mangas -->
+        <xs:element name="manga" maxOccurs="unbounded" minOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="titulo" type="xs:string"/>
+              <xs:element name="sinopsis" type="xs:string"/>
+              <xs:element name="volumen" type="xs:string"/>
+              <xs:element name="imagen" type="xs:string"/>
+              <xs:element name="compras">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="amazon" type="xs:anyURI"/>
+                    <xs:element name="casadellibro" type="xs:anyURI"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
